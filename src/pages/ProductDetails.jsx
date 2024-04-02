@@ -147,9 +147,6 @@ function ProductDetails() {
 					</div>
 				</section>
 
-				<div className="bg-gray-200 w-1/2 overflow-hidden">
-					<img src="" alt="" />
-				</div>
 
 				<section className="leftSection  md:w-1/2">
 					<h1 className="font-bold text-2xl  w-full md:text-3xl mt-5 md:mt-0">{productData?.title} </h1>
