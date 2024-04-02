@@ -3,15 +3,12 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
 	return (
-		<nav className="h-20  flex items-center justify-between sticky top-0 z-50 bg-white">
+		<nav className="h-20  flex items-center justify-between sticky top-0 z-10 bg-white">
 			<Link to={'/'}>
 				<div className="logo font-bold text-2xl">ECommerce</div>
 			</Link>
 			<div>
 				<ul className="flex items-center justify-center gap-3">
-					<li className="flex items-center justify-center cursor-pointer">
-						<p className="text-2xl">Products</p>
-					</li>
 					<Link to={'cart'}>
 						<li className="flex items-center justify-center cursor-pointer">
 							<p className="text-2xl">Cart</p>{' '}

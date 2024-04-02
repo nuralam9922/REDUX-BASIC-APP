@@ -10,7 +10,7 @@ import Home from './pages/Home.jsx';
 import ProductDetails from './pages/ProductDetails.jsx';
 import { Provider } from 'react-redux';
 import { store } from './store/store.js';
-
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 const router = createBrowserRouter([
 	{
 		path: '/',
@@ -31,11 +31,15 @@ const router = createBrowserRouter([
 		],
 	},
 ]);
+const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
-		<Provider store={store}>
-			<RouterProvider router={router} />
-		</Provider>
+		<QueryClientProvider client={queryClient}>
+			<Provider store={store}>
+				<RouterProvider router={router} />
+			</Provider>
+		</QueryClientProvider>
+		
 	</React.StrictMode>
 );
